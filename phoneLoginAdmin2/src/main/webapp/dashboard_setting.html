@@ -1,0 +1,169 @@
+<?include("/assets/header.html")?>
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+
+<?include("/assets/nav_sidebar.html")?>
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+            <!-- BEGIN PAGE HEAD-->
+            <div class="page-head">
+                <!-- BEGIN PAGE TITLE -->
+                <div class="page-title">
+                    <h1>설정
+                        <small>setting</small>
+                    </h1>
+                </div>
+                <!-- END PAGE TITLE -->
+            </div>
+            <!-- END PAGE HEAD-->
+            <div class="row">
+                <div class="col-md-12">
+		                <!-- BEGIN BORDERED TABLE PORTLET-->
+		                <div class="portlet light portlet-fit bordered">
+		                    <div class="portlet-title">
+		                        <div class="caption">
+		                            <i class="icon-settings font-red"></i>
+		                            <span class="caption-subject font-red sbold uppercase">관리자 계정 목록</span>
+		                        </div>
+		                        <div class="actions">
+		                            <div class="btn-group btn-group-devided" data-toggle="buttons">
+		                                    <a class="btn grey-salsa btn-sm active" data-toggle="modal" href="#responsive"> 관리자 계정 추가 </a>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="portlet-body">
+		                        <div class="setting-desc">관리자계정을 삭제하시려면 문의하기를 통해서 문의주시기 바랍니다.</div>
+		                        <div class="table-scrollable table-scrollable-borderless table-top-border">
+		                            <table class="table table-hover table-light">
+		                                <thead>
+		                                    <tr class="uppercase">
+		                                        <th> No </th>
+		                                        <th> 회사 </th>
+		                                        <th> 부서명 </th>
+		                                        <th> 이름 </th>
+		                                        <th> 폰번호 </th>
+		                                        <th> 이메일주소 </th>
+		                                    </tr>
+		                                </thead>
+		                                <tbody>
+		                                    <tr>
+		                                        <td> 1 </td>
+		                                        <td> 벨소프트 </td>
+		                                        <td> 기획팀 </td>
+		                                        <td> 김윤호 </td>
+		                                        <td> 010-5113-1975 </td>
+		                                        <td> yhkim@bellsoft.co.kr </td>
+		                                    </tr>
+		                                    <tr>
+		                                        <td> 2 </td>
+		                                        <td> 벨소프트 </td>
+		                                        <td> 기획팀 </td>
+		                                        <td> 김윤호 </td>
+		                                        <td> 010-5113-1975 </td>
+		                                        <td> yhkim@bellsoft.co.kr </td>
+		                                    </tr>
+		                                    <tr>
+		                                        <td> 3 </td>
+		                                        <td> 벨소프트 </td>
+		                                        <td> 기획팀 </td>
+		                                        <td> 김윤호 </td>
+		                                        <td> 010-5113-1975 </td>
+		                                        <td> yhkim@bellsoft.co.kr </td>
+		                                    </tr>
+		                                    <tr>
+		                                        <td> 4 </td>
+		                                        <td> 벨소프트 </td>
+		                                        <td> 기획팀 </td>
+		                                        <td> 김윤호 </td>
+		                                        <td> 010-5113-1975 </td>
+		                                        <td> yhkim@bellsoft.co.kr </td>
+		                                    </tr>
+		                                    <tr>
+		                                        <td> 5 </td>
+		                                        <td> 벨소프트 </td>
+		                                        <td> 기획팀 </td>
+		                                        <td> 김윤호 </td>
+		                                        <td> 010-5113-1975 </td>
+		                                        <td> yhkim@bellsoft.co.kr </td>
+		                                    </tr>
+		                                </tbody>
+		                            </table>
+		                        </div>
+                            <!-- responsive -->
+                            <div id="responsive" class="modal fade" tabindex="-1" data-width="400">
+                                <div class="modal-header">
+																    <form class="register-form" action="dashboard_setting.html" method="post">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+														        <h3 class="font-green">관리자 등록</h3>
+                                </div>
+                                <div class="modal-body">
+																    <!-- BEGIN REGISTRATION FORM -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+																		        <p class="hint"> 아래 정보를 입력해주세요.</p>
+																		        <div class="form-group">
+																		            <label class="control-label visible-ie8 visible-ie9">회사명</label>
+																		            <input class="form-control placeholder-no-fix" type="text" placeholder="회사명" name="corpname" /> </div>
+																		        <div class="form-group">
+																		            <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+																		            <label class="control-label visible-ie8 visible-ie9">부서명</label>
+																		            <input class="form-control placeholder-no-fix" type="text" placeholder="부서명" name="corpdept" /> </div>
+																		        <div class="form-group">
+																		            <label class="control-label visible-ie8 visible-ie9">이름</label>
+																		            <input class="form-control placeholder-no-fix" type="text" placeholder="이름" name="fullname" /> </div>
+																		        <div class="form-group">
+																		            <label class="control-label visible-ie8 visible-ie9">폰번호</label>
+																		            <input class="form-control placeholder-no-fix" type="text" placeholder="폰번호" name="phone" /> </div>
+																		        <p class="hint"> 계정정보를 입력해주세요.</p>
+																		        <div class="form-group">
+																		            <label class="control-label visible-ie8 visible-ie9">서비스아이디</label>
+																		            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="서비스아이디" name="username" /> </div>
+																		        <div class="form-group">
+																		            <label class="control-label visible-ie8 visible-ie9">비밀번호</label>
+																		            <input class="form-control placeholder-no-fix" type="password" autocomplete="off" id="register_password" placeholder="비밀번호" name="password" /> </div>
+																		        <div class="form-group">
+																		            <label class="control-label visible-ie8 visible-ie9">비밀번호 확인</label>
+																		            <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="비밀번호 확인" name="rpassword" /> </div>
+																		        <div class="form-group margin-top-20 margin-bottom-20">
+																		            <label class="check">
+																		                <input type="checkbox" name="tnc" /> 
+																		                <a href="javascript:;"> 이용약관 </a>과
+																		                <a href="javascript:;"> 개인정보취급방침 </a>에 동의합니다.
+																		            </label>
+																		            <div id="register_tnc_error"> </div>
+																		        </div>
+																		    <!-- END REGISTRATION FORM -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+														        <div class="form-actions">
+														            <button type="button" data-dismiss="modal" id="register-back-btn" class="btn btn-default">취소</button>
+														            <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">등록하기</button>
+														        </div>
+														        </form>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div>
+                                    <p id="dynamic_pager_demo1"></p>
+                                </div>
+                            </div>
+		                    </div>
+		                </div>
+		                <!-- END BORDERED TABLE PORTLET-->
+                </div>
+            </div>
+
+        </div>
+        <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+
+<?include("/assets/footer.html")?>

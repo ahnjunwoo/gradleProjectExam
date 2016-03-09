@@ -1,0 +1,64 @@
+apply plugin: 'java' //자바 컴파일
+apply plugin: 'eclipse-wtp' //이클립스 프로젝트
+apply plugin: 'war' //웹 프로젝트에 필요한 war
+
+version = '1.0'
+
+
+sourceCompatibility = 1.7 //소스파일의 자바 문법 버전
+targetCompatibility = 1.7 //
+
+
+
+repositories {
+     mavenCentral()
+     mavenLocal()
+     //mavenCentral() : Maven 중앙 서버로 저장소를 지정.
+     //jcenter() : Bintray의 jcenter 서버를 저장소로 지정.
+     //mavenLocal():Maven로컬 임시 보관소를 저장소로 지정
+}
+dependencies {
+    compile(group: 'org.springframework', name: 'spring-context', version:'4.1.7.RELEASE') {
+		exclude(module: 'commons-logging')
+    }
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'4.1.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-test', version:'4.1.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-jdbc', version:'4.1.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-tx', version:'4.1.7.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aop', version:'4.1.7.RELEASE'
+    compile group: 'mysql', name: 'mysql-connector-java', version:'5.1.35'
+    compile group: 'org.mybatis', name: 'mybatis', version:'3.2.8'
+    compile group: 'org.mybatis', name: 'mybatis-spring', version:'1.2.2'
+    compile group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4', version:'1.16'
+    compile group: 'org.aspectj', name: 'aspectjrt', version:'1.6.10'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version:'1.6.10'
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.6.6'
+    compile group: 'ch.qos.logback', name: 'logback-core', version:'1.0.13'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version:'1.0.13'
+    compile group: 'javax.inject', name: 'javax.inject', version:'1'
+    compile group: 'javax.servlet', name: 'jstl', version:'1.2'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.1.0'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version:'2.7.1'
+    compile 'opensymphony:sitemesh:2.4.2'
+    runtime group: 'org.slf4j', name: 'jcl-over-slf4j', version:'1.6.6'
+    runtime group: 'org.slf4j', name: 'slf4j-log4j12', version:'1.6.6'
+    runtime(group: 'log4j', name: 'log4j', version:'1.2.15') {
+		exclude(module: 'mail')
+		exclude(module: 'jms')
+		exclude(module: 'jmxtools')
+		exclude(module: 'jmxri')
+    }
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version:'2.1'
+    
+    //compile 라이프러리 : 라이브러리를 compileJava 작업을 수행할 때 사용
+    //runtime 라이브러리 : 라이브러리를 실행 시에 사용
+    //testCompile 라이브러리 : 라이브러리를 compileTestJava 작업을 수행할 때 사용. 이 작업은 compileJava를 포함하고 있으므로 compile한 라이브러리는 제외
+    //testRuntime 라이브버리 : 라이브러리를 test 작업을 수행할 때 사용. 이작업은 compileJava, compileTestJava 작업을 포함하고 있으므로 compile, testCompile한 라이브러리는 제외
+    //providedCompile : compile과 같다. 다만 .war 파일에는 포함되지 않는다.
+    //providedRuntime : runtime과 같다. 다만 .war 파일에는 포함되지 않는다.
+    //첫째. 'group:name:version:classifier'
+    // 예) 'org.springframework:spring-webmvc:4.1.4.RELEASE'
+    //둘째. group: '그룹명', name: '라이브러리 이름', version: '라이브러리 버전', classifier: '본류 접미사'
+    // 예) group: 'org.springframework', name: 'spring-webmvc', version:'4.1.7.RELEASE'
+}

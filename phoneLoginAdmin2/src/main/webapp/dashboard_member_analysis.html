@@ -1,0 +1,894 @@
+<?include("/assets/header.html")?>
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+
+<?include("/assets/nav_sidebar.html")?>
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+            <!-- BEGIN PAGE HEAD-->
+            <div class="page-head">
+                <!-- BEGIN PAGE TITLE -->
+                <div class="page-title">
+                    <h1>회원 분석
+                        <small>service status</small>
+                    </h1>
+                </div>
+                <!-- END PAGE TITLE -->
+            </div>
+            <!-- END PAGE HEAD-->
+            <div class="row">
+                <!-- responsive -->
+                <div id="responsive" class="modal fade" tabindex="-1" data-width="350">
+                    <div class="modal-header">
+										    <form class="register-form" action="dashboard_setting.html" method="post">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+								        <h3 class="font-blue">상세 분석</h3>
+                    </div>
+                    <div class="modal-body">
+										    <!-- BEGIN REGISTRATION FORM -->
+                        <div class="row">
+                            <div class="col-md-12">
+												        <div class="form-group">
+												            <label>성별</label>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 남자 </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 여자 </label>
+                                    </div>
+												        </div>
+                                <div class="form-group">
+                                    <label style="display:block;">연령</label>
+                                    <select class="form-control input-xsmall inline">
+																				<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+																				<option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option>
+																				<option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option>
+																				<option>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option>
+																				<option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option><option>47</option><option>48</option><option>49</option>
+																				<option>50</option><option>51</option><option>52</option><option>53</option><option>54</option><option>55</option><option>56</option><option>57</option><option>58</option><option>59</option>
+																				<option>60</option><option>61</option><option>62</option><option>63</option><option>64</option><option>65</option><option>66</option><option>67</option><option>68</option><option>69</option>
+																				<option>70</option><option>71</option><option>72</option><option>73</option><option>74</option><option>75</option><option>76</option><option>77</option><option>78</option><option>79</option>
+																				<option>80</option><option>81</option><option>82</option><option>83</option><option>84</option><option>85</option><option>86</option><option>87</option><option>88</option><option>89</option>
+																				<option>90</option><option>91</option><option>92</option><option>93</option><option>94</option><option>95</option><option>96</option><option>97</option><option>98</option><option>99</option>
+                                    </select>
+                                    &nbsp;&nbsp;~&nbsp;&nbsp;
+                                    <select class="form-control input-xsmall inline">
+																				<option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+																				<option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option>
+																				<option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option>
+																				<option>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option>
+																				<option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option><option>47</option><option>48</option><option>49</option>
+																				<option>50</option><option>51</option><option>52</option><option>53</option><option>54</option><option>55</option><option>56</option><option>57</option><option>58</option><option>59</option>
+																				<option>60</option><option>61</option><option>62</option><option>63</option><option>64</option><option>65</option><option>66</option><option>67</option><option>68</option><option>69</option>
+																				<option>70</option><option>71</option><option>72</option><option>73</option><option>74</option><option>75</option><option>76</option><option>77</option><option>78</option><option>79</option>
+																				<option>80</option><option>81</option><option>82</option><option>83</option><option>84</option><option>85</option><option>86</option><option>87</option><option>88</option><option>89</option>
+																				<option>90</option><option>91</option><option>92</option><option>93</option><option>94</option><option>95</option><option>96</option><option>97</option><option>98</option><option>99</option>
+                                    </select>
+                                </div>
+												        <div class="form-group">
+												            <label>통신사</label>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox1" value="option1"> SKT</label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox2" value="option2"> KT</label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox2" value="option2"> LG U+</label>
+                                        <label>
+                                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 알뜰폰</label>
+                                    </div>
+												        </div>
+												        <div class="form-group">
+												            <label>OS</label>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox1" value="option1"> Android </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox2" value="option2"> iOS </label>
+                                    </div>
+												        </div>
+												        <div class="form-group">
+												            <label>내외국인</label>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 내국인 </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 외국인 </label>
+                                    </div>
+												        </div>
+												        <div class="form-group">
+												            <label class="control-label">가입일</label>
+				                            <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy" style="width:100%; text-align:right; padding-bottom:0px; margin:0px;">
+			                                  <span class="input-group-addon"> from </span>
+			                                  <input type="text" class="form-control" name="from">
+			                                  <span class="input-group-addon"> to </span>
+			                                  <input type="text" class="form-control" name="to">
+			                              </div>
+												        </div>
+												        <div class="form-group">
+												            <label class="control-label">최종 로그인</label>
+				                            <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy" style="width:100%; text-align:right; padding-bottom:0px; margin:0px;">
+			                                  <span class="input-group-addon"> from </span>
+			                                  <input type="text" class="form-control" name="from">
+			                                  <span class="input-group-addon"> to </span>
+			                                  <input type="text" class="form-control" name="to">
+			                              </div>
+												        </div>
+
+												    <!-- END REGISTRATION FORM -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+								        <div class="form-actions">
+								            <button type="button" data-dismiss="modal" id="register-back-btn" class="btn btn-default">취소</button>
+								            <button type="submit" id="register-submit-btn" class="btn btn-primary uppercase pull-right">검색하기</button>
+								        </div>
+								        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="analysis-top-category">
+		                    <div class="analysis-top-category-button">
+		                    	<button type="button" class="btn btn-default">전체</button>
+		                    	<button type="button" class="btn btn-default">활동</button>
+		                    	<button type="button" class="btn btn-default">휴면</button>
+		                    	<button type="button" class="btn btn-default">신규</button>
+		                    	<button type="button" class="btn btn-default">탈퇴</button>
+		                    </div>
+		                    <div class="analysis-top-detail">
+                            <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                <a class="btn btn-primary" data-toggle="modal" href="#responsive"> 상세분석 </a>
+                            </div>
+		                    </div>
+		                </div>
+		                <div class="tabbable-custom nav-justified">
+		                    <ul class="nav nav-tabs nav-justified">
+		                        <li class="active">
+		                            <a href="#tab_1_1" data-toggle="tab">최근 7일</a>
+		                        </li>
+		                        <li>
+		                            <a href="#tab_1_2" data-toggle="tab">최근 30일</a>
+		                        </li>
+		                        <li>
+		                            <a href="#tab_1_3" data-toggle="tab">이번 달</a>
+		                        </li>
+		                        <li>
+		                            <a href="#tab_1_4" data-toggle="tab">지난 달</a>
+		                        </li>
+		                        <li>
+		                            <a href="#tab_1_5" data-toggle="tab">기간선택</a>
+		                        </li>
+		                    </ul>
+		                    <div class="tab-content">
+		                        <!-- BEGIN TAB 1 -->
+		                        <div class="tab-pane active clearfix analysis-pd-bottom-11" id="tab_1_1">
+		                            <p class="analysis-p-title">최근 7일간의 회원 분석 결과입니다.</p>
+
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">성별</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_5" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">연령</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_3" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">통신사</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_4" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">OS</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 시간</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 요일</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">내/외국인</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+
+		                        </div>
+		                        <!-- END TAB 1 -->
+		                        <!-- BEGIN TAB 2 -->
+		                        <div class="tab-pane analysis-pd-bottom-11 clearfix" id="tab_1_2">
+		                            <p class="analysis-p-title"> 최근 30일간의 회원 분석 결과입니다.</p>
+
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">성별</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_5" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">연령</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_3" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">통신사</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_4" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">OS</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 시간</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 요일</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">내/외국인</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+
+		                        </div>
+		                        <!-- END TAB 2 -->
+		                        <!-- BEGIN TAB 3 -->
+		                        <div class="tab-pane clearfix" id="tab_1_3" style="padding-bottom:11px;">
+		                            <p class="analysis-p-title"> 이번 달의 회원 분석 결과입니다.</p>
+
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">성별</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_5" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">연령</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_3" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">통신사</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_4" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">OS</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 시간</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 요일</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">내/외국인</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+
+		                        </div>
+		                        <!-- END TAB 3 -->
+		                        <!-- BEGIN TAB 4 -->
+		                        <div class="tab-pane clearfix" id="tab_1_4" style="padding-bottom:11px;">
+		                            <p class="analysis-p-title"> 지난 달의 회원 분석 결과입니다.</p>
+
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">성별</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_5" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">연령</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_3" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">통신사</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_4" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">OS</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 시간</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 요일</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">내/외국인</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+
+		                        </div>
+		                        <!-- END TAB 4 -->
+		                        <!-- BEGIN TAB 5 -->
+		                        <div class="tab-pane clearfix" id="tab_1_5">
+		                        		<div style="width:100%; height:60px; padding:9px 0 10px 0;">
+			                              <div style="display:inline-block; float:right; margin:0 15px 0 0;">
+			                              		<button type="button" class="btn btn-primary">조회</button>
+			                              </div>
+				                            <div class="input-group input-large date-picker input-daterange analysis-period-search" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
+			                                  <input type="text" class="form-control" name="from">
+			                                  <span class="input-group-addon"> to </span>
+			                                  <input type="text" class="form-control" name="to">
+			                              </div>
+																</div>
+
+										            <div class="row">
+										                <div class="col-md-12">
+												                <!-- BEGIN BORDERED TABLE PORTLET-->
+												                <div class="portlet light portlet-fit bordered analysis-detail-box">
+												                    <div class="portlet-body">
+												                        <div class="table-scrollable table-scrollable-borderless analysis-detail-table">
+												                            <table class="table table-hover table-light">
+												                                <tbody>
+												                                    <tr>
+												                                        <td> 성별 </td>
+												                                        <td> 남자,여자 </td>
+												                                        <td> 연령 </td>
+												                                        <td> 20-20 </td>
+												                                    </tr>
+												                                    <tr>
+												                                        <td> 통신사 </td>
+												                                        <td> SKT, 알뜰폰 </td>
+												                                        <td> OS </td>
+												                                        <td> Android </td>
+												                                    </tr>
+												                                    <tr>
+												                                        <td> 내/외국인 </td>
+												                                        <td> 선택안함 </td>
+												                                        <td> 가입일 </td>
+												                                        <td> 2015-01-01 ~ 2015-09-01 </td>
+												                                    </tr>
+												                                    <tr>
+												                                        <td> 최종로그인 </td>
+												                                        <td> 2015-01-01 ~ 2015-09-01 </td>
+												                                        <td></td>
+												                                        <td></td>
+												                                    </tr>
+												                                </tbody>
+												                            </table>
+												                        </div>
+												                    </div>
+										                    </div>
+										                </div>
+										            </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">성별</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_5" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">연령</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_3" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">통신사</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_4" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">OS</span>
+										                            <!--span class="caption-helper">with changing color</span-->
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 시간</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">주 이용 요일</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_1" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+								                <div class="col-md-6 col-sm-6">
+										                <!-- BEGIN CHART PORTLET-->
+										                <div class="portlet light bordered">
+										                    <div class="portlet-title">
+										                        <div class="caption">
+										                            <i class="icon-bar-chart font-green-haze"></i>
+										                            <span class="caption-subject bold uppercase font-green-haze">내/외국인</span>
+										                        </div>
+										                        <div class="tools">
+										                            <a href="javascript:;" class="download"> </a>
+										                        </div>
+										                    </div>
+										                    <div class="portlet-body">
+										                        <div id="chart_1_2" class="chart"> </div>
+										                    </div>
+										                </div>
+										                <!-- END CHART PORTLET-->
+								                </div>
+		                        </div>
+		                        <!-- END TAB 5 -->
+		                    </div>
+		                </div>
+                </div>
+            </div>
+            <!-- END PAGE BASE CONTENT -->
+        </div>
+        <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+
+<?include("/assets/footer.html")?>

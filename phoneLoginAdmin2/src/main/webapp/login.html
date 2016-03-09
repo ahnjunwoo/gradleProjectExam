@@ -1,0 +1,73 @@
+<?include("/assets/header_login.html")?>
+
+<!-- BEGIN LOGIN -->
+<div class="content">
+    <!-- BEGIN LOGIN FORM -->
+    <form class="login-form" action="index.html" method="post">
+        <h3 class="form-title font-green"></h3>
+        <div class="alert alert-danger display-hide">
+            <button class="close" data-close="alert"></button>
+            <span> 폰번호와 일회용 비밀번호를 입력해주세요. </span>
+        </div>
+        <div class="form-group">
+            <!--ie8, ie9 -->
+            <label class="control-label visible-ie8 visible-ie9">폰번호를 입력해주세요</label>
+            <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="폰번호를 입력해주세요" name="username" /> </div>
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">일회용 비밀번호를 입력해주세요</label>
+            <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="일회용 비밀번호를 입력해주세요" name="password" /> </div>
+        <div class="form-actions" style="margin-top:-20px;">
+            <button type="submit" class="btn green uppercase" style="width:55%; margin-right:3%;">일회용 비밀번호 요청</button>
+            <button type="submit" class="btn red uppercase" style="float:right; width:40%;" onClick="location.href='index.html'">폰로그인</button>
+        </div>
+        <div class="create-account">
+            <p>
+                <a href="javascript:;" id="register-btn" class="uppercase">관리자 처음 등록하기</a>
+            </p>
+        </div>
+    </form>
+    <!-- END LOGIN FORM -->
+    <!-- BEGIN REGISTRATION FORM -->
+    <form class="register-form" action="index.html" method="post">
+        <h3 class="font-green">관리자 등록</h3>
+        <p class="hint"> 아래 정보를 입력해주세요.</p>
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">회사명</label>
+            <input class="form-control placeholder-no-fix" type="text" placeholder="회사명" name="corpname" /> </div>
+        <div class="form-group">
+            <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+            <label class="control-label visible-ie8 visible-ie9">부서명</label>
+            <input class="form-control placeholder-no-fix" type="text" placeholder="부서명" name="corpdept" /> </div>
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">이름</label>
+            <input class="form-control placeholder-no-fix" type="text" placeholder="이름" name="fullname" /> </div>
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">폰번호</label>
+            <input class="form-control placeholder-no-fix" type="text" placeholder="폰번호" name="phone" /> </div>
+        <p class="hint"> 계정정보를 입력해주세요.</p>
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">서비스아이디</label>
+            <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="서비스아이디" name="username" /> </div>
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">비밀번호</label>
+            <input class="form-control placeholder-no-fix" type="password" autocomplete="off" id="register_password" placeholder="비밀번호" name="password" /> </div>
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">비밀번호 확인</label>
+            <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="비밀번호 확인" name="rpassword" /> </div>
+        <div class="form-group margin-top-20 margin-bottom-20">
+            <label class="check">
+                <input type="checkbox" name="tnc" /> 
+                <a href="javascript:;"> 이용약관 </a>과
+                <a href="javascript:;"> 개인정보취급방침 </a>에 동의합니다.
+            </label>
+            <div id="register_tnc_error"> </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" id="register-back-btn" class="btn btn-default">취소</button>
+            <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-right">등록하기</button>
+        </div>
+    </form>
+    <!-- END REGISTRATION FORM -->
+</div>
+
+<?include("/assets/footer_login.html")?>
